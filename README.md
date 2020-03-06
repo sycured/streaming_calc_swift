@@ -2,6 +2,9 @@
 
 Bandwidth calculation for streaming server | Rewrite from my original in Python
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sycured_streaming_calc_swift&metric=alert_status)](https://sonarcloud.io/dashboard?id=sycured_streaming_calc_swift)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=sycured_streaming_calc_swift&metric=code_smells)](https://sonarcloud.io/dashboard?id=sycured_streaming_calc_swift)
+
 ## Swift Package Manager - Dependency
 
 - [Swift Argument Parser](https://github.com/apple/swift-argument-parser)
