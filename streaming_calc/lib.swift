@@ -6,20 +6,12 @@
 //  Copyright © 2020 sycured. All rights reserved.
 //
 
-func bwServer(_ nblisteners: Float, _ bitrate: Float) -> Float {
-    125 * nblisteners * bitrate / 128
+func bwServer(_ nblisteners: Float, _ bitrate: Float) {
+    let compute = 125 * nblisteners * bitrate / 128
+    print("Number of listeners: " + String(nblisteners) + "\nBitrate (kb/s): " + String(bitrate) + "\nServer bandwidth (Mib/s): " + String(compute))
 }
 
-func serverUsageBw(_ nblisteners: Float, _ bitrate: Float, _ nbdays: Float, _ nbhours: Float) -> Float {
-    28125 * nbdays * nbhours * bitrate * nblisteners / 65536
-}
-
-func printBwServer(_ nblisteners: Float, _ bitrate: Float) {
-    let result: Float = bwServer(nblisteners, bitrate)
-    print("Number of listeners: " + String(nblisteners) + "\nBitrate (kb/s): " + String(bitrate) + "\nServer bandwidth (Mib/s): " + String(result))
-}
-
-func printServerUsageBw(_ nblisteners: Float, _ bitrate: Float, _ nbdays: Float, _ nbhours: Float) {
-    let result: Float = serverUsageBw(nblisteners, bitrate, nbdays, nbhours)
-    print("Number of listeners: " + String(nblisteners) + "\nBitrate (kb/s): " + String(bitrate) + "\nNumber of days: " + String(nbdays) + "\nNumber of hours by days: " + String(nbhours) + "\nBandwidth used (GiB): " + String(result))
+func serverUsageBw(_ nblisteners: Float, _ bitrate: Float, _ nbdays: Float, _ nbhours: Float) {
+    let compute = 28125 * nbdays * nbhours * bitrate * nblisteners / 65536
+    print("Number of listeners: " + String(nblisteners) + "\nBitrate (kb/s): " + String(bitrate) + "\nNumber of days: " + String(nbdays) + "\nNumber of hours by days: " + String(nbhours) + "\nBandwidth used (GiB): " + String(compute))
 }

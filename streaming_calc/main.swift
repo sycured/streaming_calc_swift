@@ -45,7 +45,7 @@ extension StreamingCalc {
         var options: Options_bwserver
 
         func run() {
-            printBwServer(options.nblisteners, options.bitrate)
+            bwServer(options.nblisteners, options.bitrate)
         }
     }
 
@@ -56,7 +56,7 @@ extension StreamingCalc {
         var options: Options_usagebw
 
         func run() {
-            printServerUsageBw(options.nblisteners, options.bitrate, options.nbdays, options.nbhours)
+            serverUsageBw(options.nblisteners, options.bitrate, options.nbdays, options.nbhours)
         }
     }
 }
